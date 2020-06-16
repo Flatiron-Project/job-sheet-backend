@@ -12,6 +12,7 @@ Things you may want to cover:
 1. Clone respository
 2. In the root directory run: ```bundle install```
 3. To start the server run: ```rails s```
+  *Server is set to listen on port 3001 as default*
 
 * System dependencies
 
