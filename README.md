@@ -5,7 +5,13 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+## Ruby version:
+2.6.6
+
+## To Run:
+1. Clone respository
+2. In the root directory run: ```bundle install```
+3. To start the server run: ```rails s```
 
 * System dependencies
 
