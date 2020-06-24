@@ -13,10 +13,12 @@ Rails.application.routes.draw do
 
   delete '/logout' => 'sessions#destroy'
 
-  get '/auth/:provider/callback' => 'sessions#google'
+
+#omniauth callback route
+  get '/auth/:provider/callback' => 'sessions#google_oauth'
 
   resources :categories
-  resources :posts
+  resources :jobs
   resources :users do
     resources :jobs, only: [:new, :create, :index]
   end
