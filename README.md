@@ -9,7 +9,7 @@ Things you may want to cover:
 2.6.6
 
 ## To Run:
-1. Clone respository
+1. Clone repository
 2. In the root directory run: ```bundle install```
 3. To start the server run: ```rails s```
   *Server is set to listen on port 3001 as default*
