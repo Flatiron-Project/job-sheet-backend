@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
 
 #omniauth callback route
-  get '/auth/:provider/callback' => 'sessions#google_oauth'
+  get '/auth/:provider/callback' => 'sessions#google'
 
   resources :categories
   resources :jobs

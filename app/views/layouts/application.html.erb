@@ -10,6 +10,23 @@
   </head>
 
   <body>
+    <div>
+  <% if logged_in? %>
+  <%= link_to "New Gig", new_job_path %> |
+  <%= link_to "All Gigs", jobs_path %> |
+  <%= link_to "Logout", logout_path, method: "delete" %>
+  <%else%>
+  <%= link_to "Sign-up", signup_path %> |
+  <%= link_to "Login", login_path %>
+  <%end%>
+</div>
+
+<div>
+  <% if flash[:message] %>
+    <%= flash[:message] %>
+  <%end%>
+  <%= @error %>
+</div>
     <%= yield %>
   </body>
 </html>
