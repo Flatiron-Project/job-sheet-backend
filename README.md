@@ -11,7 +11,8 @@ Things you may want to cover:
 ## To Run:
 1. Clone repository
 2. In the root directory run: ```bundle install```
-3. To start the server run: ```rails s```
+3. Run ```rails db:migrate``` to set up database
+4. To start the server run: ```rails s```
   *Server is set to listen on port 3001 as default*
 
 * System dependencies
