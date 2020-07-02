@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  skip_before_action :verify_authenticity_token
 
   def new
     @user = User.new
@@ -17,14 +18,15 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find_by_id(params[:id])
-    redirect_to '/' if !@user
+    user = User.find_by_id(params[:id])
+    # redirect_to '/' if !@user
+    render json: user, only: [:id, :username, :email]
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:username, :email, :password)
+    params.permit(:username, :email, :password)
   end
 
 end
